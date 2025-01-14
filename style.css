@@ -51,7 +51,7 @@ section {
 
 }
 
-header{
+/*header{
     position: fixed;
     width: 100%;
     top: 0;
@@ -119,7 +119,62 @@ header .shadow .logo{
 .navbar a:hover::after, 
 .navbar .home-active::after {
     width: 100%;
+}*/
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 100px;
+    z-index: 1000;
+    transition: 0.5s;
 }
+header.shadow {
+    background: rgba(0, 0, 0, 0.669);
+    box-shadow: 0 0 4px rgba(14, 55, 54, 0.15);
+}
+header .logo {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--bg-color);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+header .logo .bx {
+    font-size: 24px;
+    color: var(--main-color);
+}
+
+.navbar {
+    display: flex;
+    gap: 20px;
+}
+.navbar li {
+    position: relative;
+}
+.navbar a {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--bg-color);
+    position: relative;
+}
+.navbar a::after {
+    content: "";
+    width: 0;
+    height: 2px;
+    background: var(--main-color);
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    transition: 0.4s;
+}
+.navbar a:hover::after {
+    width: 100%;
+}
+
 #menu-icon {
     font-size: 24px;
     cursor: pointer;
